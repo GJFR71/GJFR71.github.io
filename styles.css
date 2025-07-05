@@ -1,0 +1,195 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #ff7a00;     /* Destaque principal */
+  --cor-secundaria: #0f0f0f;   /* Fundo geral */
+  --cor-texto: #f4f4f4;        /* Texto padrão */
+  --cor-destaque: #ff9900;     /* Hover, ênfases */
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* CABEÇALHO */
+header {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 122, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: var(--cor-primaria);
+  font-size: 2.2em;
+  margin-top: 15px;
+}
+
+header p {
+  font-style: italic;
+  color: var(--cor-destaque);
+  margin-top: 10px;
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-primaria);
+  box-shadow: 0 0 12px rgba(255, 122, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.foto-perfil:hover {
+  transform: scale(1.05);
+}
+
+/* NAVEGAÇÃO */
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--cor-destaque);
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+main section {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(255, 153, 0, 0.08);
+}
+
+h2 {
+  color: var(--cor-primaria);
+  border-left: 4px solid var(--cor-primaria);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+ul li {
+  margin: 8px 0;
+}
+
+/* ASIDE */
+aside {
+  max-width: 900px;
+  margin: 30px auto;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(255, 153, 0, 0.08);
+}
+
+aside h2 {
+  color: var(--cor-destaque);
+}
+
+aside a {
+  color: var(--cor-primaria);
+  transition: color 0.3s;
+}
+
+aside a:hover {
+  color: var(--cor-destaque);
+}
+
+/* ÍCONES DE REDES */
+.icones-redes {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.icones-redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria);
+  font-size: 18px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.icones-redes a:hover {
+  background-color: var(--cor-destaque);
+  transform: scale(1.1);
+}
+
+/* RODAPÉ */
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* ANIMAÇÃO */
+section, aside, header {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+}
